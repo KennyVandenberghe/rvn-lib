@@ -1,7 +1,7 @@
 @import "compass/css3/border-radius";
 
-$action-picker-bgcolor                           : #000 !default;
-$action-picker-color                             : #fff !default;
+$action-picker_bgcolor                           : #000 !default;
+$action-picker_color                             : #fff !default;
 
 $action-picker_bottom                            : 1.4em !default;
 $action-picker_right                             : 1.4em !default;
@@ -26,8 +26,8 @@ $action-picker-sub-action_height                 : 1.9em !default;
 $action-picker-label_border-radius               : 0.5em !default;
 $action-picker-label_bottom                      : calc(50% - 10px) !default;
 $action-picker-label_right                       : 4.5em !default;
-$action-picker-label_background-color            : $action-picker-bgcolor;
-$action-picker-label_color                       : $action-picker-color;
+$action-picker-label_background-color            : $action-picker_bgcolor;
+$action-picker-label_color                       : $action-picker_color;
 $action-picker-label_height                      : 1.5em !default;
 $action-picker-label_line-height                 : 1.5em !default;
 $action-picker-label_padding                     : 0 10px !default;
