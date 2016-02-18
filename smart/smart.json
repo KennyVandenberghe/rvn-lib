@@ -1,0 +1,19 @@
+{
+  "name": "rvn",
+  "description": "rvn package",
+  "homepage": "https://github.com/KennyVandenberghe/rvn-lib",
+  "author": "Kenny Vandenberghe",
+  "version": "0.0.1",
+  "git": "git@github.com:KennyVandenberghe/rvn-lib.git",
+  "packages": {
+    "rvn:light": {
+      "path": "../packages/rvn:light"
+    },
+    "rvn:mdl": {
+      "path": "../packages/rvn:mdl"
+    },
+    "rvn:overlay": {
+      "path": "../packages/rvn:overlay"
+    }
+  }
+}
