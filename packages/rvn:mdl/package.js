@@ -19,7 +19,7 @@ Package.onUse(function(api) {
   api.use([
     'ui',
     'templating',
-    'zodiase:mdl',
+    'zodiase:mdl@1.1.0',
     'percolate:velocityjs',
     'reactive-var',
     'rvn:light'

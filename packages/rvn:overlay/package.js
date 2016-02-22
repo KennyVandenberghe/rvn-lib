@@ -11,7 +11,7 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.2');
+  api.versionsFrom('1.2.1');
   var c = 'client',
       s = 'server',
       cs = [c, s];
@@ -31,7 +31,6 @@ Package.onUse(function(api) {
   ], cs);
 
   api.use([
-    'pa:core',
     'underscore',
     'momentjs:moment'
   ], cs);
