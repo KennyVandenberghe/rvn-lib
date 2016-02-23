@@ -33,6 +33,8 @@ Package.onUse(function(api) {
     'mdl/card.html',
     'components/player-card.html',
     'components/actionPicker/actionPicker.html',
-    'components/actionPicker/actionPicker.js'
+    'components/actionPicker/actionPicker.js',
+    'components/list/list.html',
+    'components/list/list.js'
   ], c);
 });

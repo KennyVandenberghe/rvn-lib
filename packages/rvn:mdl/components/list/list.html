@@ -1,0 +1,20 @@
+<template name="mdlList">
+  <ul class="mdl-list">
+    {{#each getItems}}
+      <li class="mdl-list__item {{#if subTitle}}mdl-list__item--two-line{{/if}}">
+        <span class="mdl-list__item-primary-content">
+          {{#if icon}}
+            <i class="material-icons mdl-list__item-icon">{{icon}}</i>
+          {{/if}}
+          <span>{{title}}</span>
+          {{#if subTitle}}
+            <span class="mdl-list__item-sub-title">62 Episodes</span>
+          {{/if}}
+        </span>
+        {{#if action}}
+          <a class="mdl-list__item-secondary-action" href="{{url}}"><i class="material-icons">{{icon}}</i></a>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
