@@ -1,0 +1,50 @@
+$header_width             : 100% !default;
+$header_height            : 250px !default;
+$header-title_font-size   : 2em !default;
+$header-subtitle_font-size: 1em !default;
+
+$header-action-container_width  : 56px !default;
+$header-action-container_height : 56px !default;
+$header-action-container_bottom : -28px !default;
+$header-action-container_right  : 20px !default;
+$header-action-container_z-index: 1 !default;
+
+$header-action-content_max-width   : 1024px !default;
+$header-action-content_margin-left : auto !default;
+$header-action-content_margin-right: auto !default;
+
+
+.mdl-header {
+	position        : relative;
+	width           : $header_width;
+	height          : $header_height;
+	background-color: blue;
+	> .header-title {
+		font-size: $header-title_font-size;
+	}
+	> .header-subtitle {
+		font-size: $header-subtitle_font-size;
+	}
+	&.header-action {
+		> .header-action-container {
+			position        : absolute;
+			width           : $header-action-container_width;
+			height          : $header-action-container_height;
+			bottom          : $header-action-container_bottom;
+			right           : $header-action-container_right;
+			z-index         : $header-action-container_z-index;
+			background-color: transparent;
+			> .header-action-content {
+				max-width   : $header-action-content_max-width;
+				margin-left : $header-action-content_margin-left;
+				margin-right: $header-action-content_margin-right;
+			}
+			> .button-container {
+				position: absolute;
+			}
+			> .mdl-button {
+				position: relative;
+			}
+		}
+	}
+}

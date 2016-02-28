@@ -35,6 +35,8 @@ Package.onUse(function(api) {
     'components/actionPicker/actionPicker.html',
     'components/actionPicker/actionPicker.js',
     'components/list/list.html',
-    'components/list/list.js'
+    'components/list/list.js',
+    'components/header/header.html',
+    'components/header/header.js'
   ], c);
 });
