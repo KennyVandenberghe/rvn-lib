@@ -1,0 +1,23 @@
+<template name="mdlDropdown">
+  <form action="#">
+    <div class="mdl-dropdown mdl-textfield mdl-js-textfield">
+      <div class="dropdown-toggle mdl-textfield__input" type="text" id="dropdown">
+      <label class="mdl-textfield__label" for="dropdown">
+        {{getActiveItem}}
+      </label>
+      <i class="material-icons">arrow_drop_down</i>
+      <div class="dropdown-wrapper">
+        {{#if showDropdown}}
+        <div class="records-container">
+          {{#each getItems}}
+          <div class="record {{renderActive}}">
+            {{title}}
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    </div>
+  </form>
+</template>

@@ -1,0 +1,21 @@
+@import "mixins/stretch";
+
+$mdl-dialog_width         : 500px !default;
+$mdl-dialog_height        : 250px !default;
+$mdl-dialog-actions_bottom: 0 !default;
+$mdl-dialog-actions_right : 0 !default;
+
+.mdl-dialog {
+  @include stretch;
+  width       : $mdl-dialog_width;
+  height      : $mdl-dialog_height;
+  overflow    : auto;
+  > .mdl-dialog__actions {
+    position: absolute;
+    bottom  : $mdl-dialog-actions_bottom;
+    right   : $mdl-dialog-actions_right;
+  }
+  &.closed {
+    display: none;
+  }
+}

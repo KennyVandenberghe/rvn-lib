@@ -1,0 +1,70 @@
+$dropdown_bgcolor             : rgb(255, 255, 255) !default;
+$dropdown_shadow              : rgba(0, 0, 0, 0.117647) 0px 1px 6px,
+                                rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+$dropdown_width               : 100% !default;
+$dropdown_max-height          : 700px !default;
+$dropdown-record_color        : #000 !default;
+$dropdown-record-active_color : #3F51B5 !default;
+$dropdown-record-hover-bgcolor: #E8E8E8 !default;
+$dropdown_height              : 100%;
+$dropdown_width               : 100px !default;
+
+$mdl-dropdown-icon_right                             : 0 !default;
+$mdl-dropdown-icon_top                               : calc(50% - 12px) !default;
+
+$mdl-dropdown-textfield_height                       : 18px !default;
+
+$mdl-dropdown-container_width                        : $dropdown_width;
+$mdl-dropdown-container_max-height                   : $dropdown_max-height;
+$mdl-dropdown-container_top                          : 20px !default;
+$mdl-dropdown-container_background-color             : $dropdown_bgcolor;
+$mdl-dropdown-container_border-radius                : 2px !default;
+$mdl-dropdown-container_padding                      : 16px 0px !default;
+$mdl-dropdown-container_z-index                      : 1 !default;
+$mdl-dropdown-container_box-shadow                   : $dropdown_shadow;
+
+$mdl-dropdown-container-record_width                 : auto !default;
+$mdl-dropdown-container-record_padding               : 0 24px !default;
+$mdl-dropdown-container-record_font-size             : 15px !default;
+$mdl-dropdown-container-record_line-height           : 32px !default;
+$mdl-dropdown-container-record_color                 : $dropdown-record_color;
+$mdl-dropdown-container-record-active_color          : $dropdown-record-active_color;
+$mdl-dropdown-container-record-hover_background-color: $dropdown-record-hover-bgcolor;
+
+.mdl-dropdown {
+  > .mdl-textfield__input {
+    height: $mdl-dropdown-textfield_height;
+    > i {
+      position: absolute;
+      right   : $mdl-dropdown-icon_right;
+      top     : $mdl-dropdown-icon_top;
+    }
+    > .dropdown-wrapper {
+      > .records-container {
+        position        : absolute;
+        overflow-y      : auto;
+        width           : $mdl-dropdown-container_width;
+        max-height      : $mdl-dropdown-container_max-height;
+        top             : $mdl-dropdown-container_top;
+        background-color: $mdl-dropdown-container_background-color;
+        border-radius   : $mdl-dropdown-container_border-radius;
+        padding         : $mdl-dropdown-container_padding;
+        z-index         : $mdl-dropdown-container_z-index;
+        box-shadow      : $mdl-dropdown-container_box-shadow;
+        > .record {
+          width      : $mdl-dropdown-container-record_width;
+          padding    : $mdl-dropdown-container-record_padding;
+          font-size  : $mdl-dropdown-container-record_font-size;
+          line-height: $mdl-dropdown-container-record_line-height;
+          color      : $mdl-dropdown-container-record_color;
+          &.-active {
+            color: $mdl-dropdown-container-record-active_color;
+          }
+          &:hover {
+            background-color: $mdl-dropdown-container-record-hover_background-color;
+          }
+        }
+      }
+    }
+  }
+}

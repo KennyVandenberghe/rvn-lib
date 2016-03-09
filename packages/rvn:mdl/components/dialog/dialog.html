@@ -1,0 +1,16 @@
+<template name="mdlDialog">
+    <dialog class="mdl-dialog {{#unless isOpen}}closed{{/unless}}">
+      {{#if isOpen}}
+        <h4 class="mdl-dialog__title">{{title}}</h4>
+        <div class="mdl-dialog__content">
+          <p>
+            {{> Template.dynamic template=renderTemplate}}
+          </p>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button type="button" class="mdl-button confirm">{{#if mainButton}}{{mainButton}}{{else}}Agree{{/if}}</button>
+          <button type="button" class="mdl-button close">{{#if subButton}}{{subButton}}{{else}}Disagree{{/if}}</button>
+        </div>
+      {{/if}}
+    </dialog>
+</template>

@@ -37,6 +37,14 @@ Package.onUse(function(api) {
     'components/list/list.html',
     'components/list/list.js',
     'components/header/header.html',
-    'components/header/header.js'
+    'components/header/header.js',
+    'components/tabbar/tabbar.html',
+    'components/tabbar/tabbar.js',
+    'components/dropdown/dropdown.html',
+    'components/dropdown/dropdown.js',
+    'components/snackbar/snackbar.html',
+    'components/snackbar/snackbar.js',
+    'components/dialog/dialog.html',
+    'components/dialog/dialog.js'
   ], c);
 });

@@ -1,0 +1,15 @@
+<template name="mdlTabbar">
+  <div class="tab-bar-container mdl-layout__tab-bar-container">
+    <div class="tab-bar-left-button mdl-layout__tab-bar-button mdl-layout__tab-bar-left-button">
+      <i class="material-icons">chevron_left</i>
+    </div>
+    <div class="tab-bar-content mdl-layout__tab-bar mdl-js-ripple-effect is-casting-shadow mdl-js-ripple-effect--ignore-events" data-upgraded=",MaterialRipple">
+      {{#each getItems}}
+        <a href="{{slug}}" class="mdl-layout__tab {{#if renderActive}}is-active{{/if}}">{{title}}</a>
+      {{/each}}
+    </div>
+    <div class="tab-bar-right-button mdl-layout__tab-bar-button mdl-layout__tab-bar-right-button">
+      <i class="material-icons">chevron_right</i>
+    </div>
+  </div>
+</template>

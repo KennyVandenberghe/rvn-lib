@@ -1,0 +1,12 @@
+$mdl-snackbar-action_right : 0 !default;
+$mdl-snackbar-action_bottom: 0 !default;
+$mdl-snackbar-action_top   : 0 !default;
+
+.mdl-snackbar {
+  > .mdl-snackbar__action {
+    position: absolute;
+    right   : $mdl-snackbar-action_right;
+    bottom  : $mdl-snackbar-action_bottom;
+    top     : $mdl-snackbar-action_top;
+  }
+}

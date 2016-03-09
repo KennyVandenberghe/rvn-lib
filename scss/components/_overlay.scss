@@ -1,1 +1,137 @@
-@include overlay();
+$overlay_width                          : 920px !default;
+$overlay_height                         : 80% !default;
+$overlay_top                            : 20%;
+$overlay_left                           : calc(50% - 390px);
+$overlay_background-color               : white !default;
+$overlay_box-shadow                     : 0 16px 24px 2px rgba(0,0,0,.14),
+                                          0 6px 30px 5px rgba(0,0,0,.12),
+                                          0 8px 10px -5px rgba(0,0,0,.2);
+$overlay_width-tablet                   : 750px !default;
+$overlay_left-tablet                    : calc(50% - 300px) !default;
+$overlay_width-tablet-smaller           : 660px !default;
+$overlay_left-tablet-smaller            : calc(50% - 330px) !default;
+$overlay_width-phone                    : 500px !default;
+$overlay_left-phone                     : calc(50% - 250px) !default;
+$overlay_width-phone-smaller            : 400px !default;
+$overlay_left-phone-smaller             : calc(50% - 200px) !default;
+
+$overlay-container_padding              : 30px !default;
+$overlay-container_height               : 85% !default;
+$overlay-container-title_font-size      : 2em !default;
+$overlay-container-subtitle_font-size   : 1.3em !default;
+$overlay-container-infosection_font-size: 1.3em !default;
+
+$overlay--right_width                         : 50% !default;
+$overlay--right_max-width                     : 800px !default;
+$overlay--right_min-width                     : 320px !default;
+$overlay--right_height                        : 100% !default;
+$overlay--right_top                           : 0;
+$overlay--right_right                         : 0;
+
+$overlay--left_width                          : 50% !default;
+$overlay--left_max-width                      : 800px !default;
+$overlay--left_min-width                      : 320px !default;
+$overlay--left_height                         : 100% !default;
+$overlay--left_top                            : 0;
+$overlay--left_left                           : 0;
+
+$overlay--top_bottom                          : 80%;
+$overlay--top_top                             : 0;
+
+.overlay {
+  z-index          : 10;
+  overflow         : auto;
+  position         : absolute;
+  width            : $overlay_width;
+  height           : $overlay_height;
+  top              : $overlay_top;
+  left             : $overlay_left;
+  background-color : $overlay_background-color;
+  box-shadow       : $overlay_box-shadow;
+  @media (max-width: 1200px) {
+    width: $overlay-width-tablet;
+    left : $overlay_left-tablet;
+  }
+  @media (max-width: 1024px) {
+    width: $overlay_width-tablet-smaller;
+    left : $overlay_left-tablet-smaller;
+  }
+  @media (max-width: 670px) {
+    width: $overlay_width-phone;
+    left : $overlay_left-phone;
+  }
+  @media (max-width: 500px) {
+    width: $overlay_width-phone-smaller;
+    left : $overlay_left-phone-smaller;
+  }
+
+   &.-right {
+     overflow-x       : hidden;
+     width            : $overlay--right_width;
+     min-width        : $overlay--right_min-width;
+     max-width        : $overlay--right_max-width;
+     height           : $overlay--right_height;
+     top              : $overlay--right_top;
+     right            : $overlay--right_right;
+     left             : auto;
+   }
+
+   &.-left {
+     overflow-x       : hidden;
+     width            : $overlay--left_width;
+     min-width        : $overlay--left_min-width;
+     max-width        : $overlay--left_max-width;
+     height           : $overlay--left_height;
+     top              : $overlay--left_top;
+     left             : $overlay--left_left;
+     right            : auto;
+   }
+   &.-top {
+     bottom: $overlay--top_bottom;
+     top: $overlay--top_top;
+   }
+
+  .overlay-container {
+    display: block;
+    height : $overlay-container_height;
+    @include display-flex();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    > .title {
+      font-size: $overlay-container-title_font-size;
+      @include flex(1 20%);
+    }
+    > .subtitle {
+      font-size: $overlay-container-subtitle_font-size;
+      @include flex(1 20%);
+    }
+    > .infosection {
+      font-size: $overlay-container-infosection_font-size;
+      @include flex(1 58%);
+      > *:not(.no-pane-margin) {
+        margin: $overlay-container_padding;
+        box-sizing: border-box;
+      }
+    }
+    > .button-container {
+      @include flex(0 0 2%);
+      text-align: center;
+      padding: 20px;
+    }
+  }
+}
+
+$overlay-mask_top                            : 0;
+$overlay-mask_z-index                        : 9;
+$overlay-mask_width                          : 100%;
+$overlay-mask_height                         : 100%;
+$overlay-mask_bgcolor                        : rgba(255, 255, 255, 0.8) !default;
+
+.overlay-mask {
+  top                 : $overlay-mask_top;
+  z-index             : $overlay-mask_z-index;
+  position            : absolute;
+  width               : $overlay-mask_width;
+  height              : $overlay-mask_height;
+  background-color    : $overlay-mask_bgcolor;
+}

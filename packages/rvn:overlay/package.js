@@ -18,7 +18,7 @@ Package.onUse(function(api) {
 
   api.use([
     'templating',
-    'percolate:velocityjs',
+    'velocityjs:velocityjs@1.2.1',
     'underscore',
     'reactive-dict',
     'reactive-var',

@@ -33,7 +33,7 @@ $action-picker-label_line-height                 : 1.5em !default;
 $action-picker-label_padding                     : 0 10px !default;
 
 .action-picker {
-  position: absolute;
+  position: fixed;
   bottom  : $action-picker_bottom;
   right   : $action-picker_right;
   z-index : $action-picker_z-index;
