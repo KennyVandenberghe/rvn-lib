@@ -1,0 +1,38 @@
+.mdl-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  > .carousel-wrapper {
+    width: 300%;
+    > .carousel-item {
+      float: left;
+    }
+  }
+  > .carousel-previous {
+    position: absolute;
+    left: 10px;
+    top: calc(50% - 14px);
+    cursor: pointer;
+  }
+  > .carousel-next {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 14px);
+    cursor: pointer;
+  }
+  > .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    > i {
+      color: gainsboro;
+      font-size: 0.6em;
+      &.-active {
+        color: #606060;
+      }
+    }
+  }
+}

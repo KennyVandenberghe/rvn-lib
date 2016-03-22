@@ -15,32 +15,47 @@ _.extend(Rvn.mdlTabbar.prototype, {
   },
   setActiveItem: function(item) {
     this.activeItem.set(item);
+    //Router.go(item);
   },
   getActiveItem: function() {
     return this.activeItem.get();
   },
-  getCurrentItem: function() {
+  getCurrentIndex: function() {
     var c = _.indexOf(_.pluck(this.getItems(), 'slug'), this.getActiveItem());
 
     return c;
   },
   getNextItem: function() {
-    var currentItem = this.getCurrentItem(),
-        nextItem = _.findWhere(this.getItems(), {key: currentItem + 1});
+    var currentIndex = this.getCurrentIndex(),
+        nextItem = this.getItems()[currentIndex + 1];
 
-    return nextItem;
+    if (!! nextItem) {
+      return nextItem;
+    } else {
+      return this.getItems()[0];
+    }
   },
   getPreviousItem: function() {
-    var currentItem = this.getCurrentItem(),
-        previousItem = _.findWhere(this.getItems(), {key: currentItem - 1});
+    var currentIndex = this.getCurrentIndex(),
+        previousItem = this.getItems()[currentIndex - 1];
 
-    return previousItem;
+    if (!! previousItem) {
+      return previousItem;
+    } else {
+      return this.getItems()[(this.getItems().length - 1)];
+    }
   },
   setNextItem: function() {
-    this.setActiveItem(this.getNextItem().slug);
+    var nextItem = this.getNextItem();
+    if (!! nextItem && !! nextItem.slug) {
+      this.setActiveItem(nextItem.slug);
+    }
   },
   setPreviousItem: function() {
     this.setActiveItem(this.getPreviousItem().slug);
+  },
+  hasChevrons: function() {
+    return this.chevrons.get();
   }
 });
 
@@ -60,6 +75,9 @@ Template.mdlTabbar.helpers({
   renderActive: function() {
     var tpl = Template.instance();
     return tpl.mdlTabbar.getActiveItem() === this.slug ? '-active' : '';
+  },
+  hasChevrons: function() {
+    return this.mdlTabbar.hasChevrons();
   }
 });
 

@@ -22,6 +22,7 @@ Package.onUse(function(api) {
     'zodiase:mdl@1.1.0',
     'percolate:velocityjs',
     'reactive-var',
+    'momentjs:moment',
     'rvn:light'
   ], c);
 
@@ -45,6 +46,10 @@ Package.onUse(function(api) {
     'components/snackbar/snackbar.html',
     'components/snackbar/snackbar.js',
     'components/dialog/dialog.html',
-    'components/dialog/dialog.js'
+    'components/dialog/dialog.js',
+    'components/carousel/carousel.html',
+    'components/carousel/carousel.js',
+    'components/datePicker/datePicker.html',
+    'components/datePicker/datePicker.js'
   ], c);
 });

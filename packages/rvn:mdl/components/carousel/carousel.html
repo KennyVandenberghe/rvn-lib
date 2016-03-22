@@ -1,0 +1,24 @@
+<template name="mdlCarousel">
+  <div class="mdl-carousel">
+    <div class="carousel-wrapper" style="width:{{getContainerWidth}}">
+      {{> UI.contentBlock getContext}}
+    </div>
+    <div class="carousel-previous">
+      <i class="material-icons">chevron_left</i>
+    </div>
+    <div class="carousel-next">
+      <i class="material-icons">chevron_right</i>
+    </div>
+    <div class="carousel-indicators">
+      {{#each getItems}}
+        <i class="icon-i-bol {{active}}"></i>
+      {{/each}}
+    </div>
+  </div>
+</template>
+
+<template name="mdlCarouselItem">
+  <div class="carousel-item" style="width:{{getItemWidth}}">
+    {{> UI.contentBlock}}
+  </div>
+</template>
