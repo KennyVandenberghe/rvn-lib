@@ -1,9 +1,9 @@
-<template name="overlay">
+<template name="rvnOverlay">
 	<div class="overlay-wrapper">
 		{{#if isOpen}}
 			<div class="overlay -{{getDirection}}">
 				<div class="overlay-container">
-					{{> Template.dynamic template=renderTemplate}}
+					{{> Template.dynamic template=renderTemplate data=getData}}
 				</div>
 				<div class="button-container">
 					{{#unless isUncloseable}}

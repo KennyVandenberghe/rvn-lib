@@ -79,7 +79,7 @@ _.extend(OverlayClass.prototype, {
 
 Rvn.overlay = new OverlayClass();
 
-Template.overlay.onRendered(function(){
+Template.rvnOverlay.onRendered(function(){
   var self = this,
       componentHandler = window.componentHandler,
       cc = this.find('.overlay-wrapper');
@@ -106,7 +106,7 @@ Template.overlay.onRendered(function(){
   }
 });
 
-Template.overlay.helpers({
+Template.rvnOverlay.helpers({
   isOpen: function() {
     return Rvn.overlay.isOpen();
   },
@@ -124,7 +124,7 @@ Template.overlay.helpers({
   }
 });
 
-Template.overlay.events({
+Template.rvnOverlay.events({
   'click .close': function(e, tpl){
      Rvn.overlay.close();
   }
